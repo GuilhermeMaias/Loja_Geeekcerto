@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Panic - Loja Geek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <img src="logo.png" alt="Logo da Loja Geek" id="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#camisetas">Camisetas</a></li>
+                <li><a href="#colecionaveis">Colecionáveis</a></li>
+                <li><a href="#acessorios">Acessórios</a></li>
+                <li><a href="#decoracao">Decoração</a></li>
+                <li><a href="#" id="cadastro-link">Cadastrar Produto</a></li>
+                <li><a href="#meu-carrinho">Meu Carrinho</a></li>
+            </ul>
+        </nav>
+        <h1>SUPER GEEK VIP</h1>
+        <p>Bem-vindo à loja SUPER GEEK VIP !</p>
+    </header>
+
+    <main>
+        <section id="categorias">
+            <div class="categoria" id="camisetas">
+                <img src="camisetas.jpg" alt="Camisetas" class="categoria-img">
+                <h2>Camisetas</h2>
+                <p>Confira nossas ofertas de camisetas!</p>
+            </div>
+            <div class="categoria" id="colecionaveis">
+                <img src="colecionaveis.jpg" alt="Colecionáveis" class="categoria-img">
+                <h2>Colecionáveis</h2>
+                <p>Ofertas especiais em colecionáveis!</p>
+            </div>
+            <div class="categoria" id="acessorios">
+                <img src="acessorios.jpg" alt="Acessórios" class="categoria-img">
+                <h2>Acessórios</h2>
+                <p>Compre os acessórios geeks que você adora!</p>
+            </div>
+            <div class="categoria" id="decoracao">
+                <img src="decoracao.jpg" alt="Decoração" class="categoria-img">
+                <h2>Decoração</h2>
+                <p>Deixe seu espaço mais geek com nossa decoração!</p>
+            </div>
+        </section>
+
+        <section id="cadastro-produto" style="display: none;">
+            <h2>Cadastrar Novo Produto</h2>
+            <form id="form-cadastro">
+                <label for="nome-produto">Nome do Produto:</label>
+                <input type="text" id="nome-produto" required>
+        
+                <label for="categoria-produto">Categoria:</label>
+                <select id="categoria-produto" required>
+                    <option value="camisetas">Camisetas</option>
+                    <option value="colecionaveis">Colecionáveis</option>
+                    <option value="acessorios">Acessórios</option>
+                    <option value="decoracao">Decoração</option>
+                </select>
+        
+                <label for="preco-produto">Preço:</label>
+                <input type="number" id="preco-produto" step="0.01" min="0" required>
+        
+                <label for="quantidade-produto">Quantidade:</label>
+                <input type="number" id="quantidade-produto" required>
+        
+                <label for="imagem-produto">Imagem do Produto:</label>
+                <input type="file" id="imagem-produto" accept="image/*" required>
+        
+                <button type="submit">Cadastrar Produto</button>
+            </form>
+        </section>
+        
+
+        <section id="products">
+            <h2>Produtos em Destaque</h2>
+        </section>
+
+        <section id="meu-carrinho">
+            <h2>Meu Carrinho</h2>
+            <div id="cart-items"></div>
+            <p>Total: R$ <span id="total-price">0.00</span></p>
+            <button onclick="finalizarCompra()">Comprar Agora</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
